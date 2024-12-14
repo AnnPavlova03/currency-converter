@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Currency-converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта
 
-Currently, two official plugins are available:
+Currency-converter — это веб-приложение, предназначенное для простого и удобного преобразования валют. Пользователи могут вводить сумму в одной валюте и выбирать валюту, в которую они хотят конвертировать, получая мгновенные результаты. Приложение использует актуальные курсы валют, чтобы обеспечить точность расчетов.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## В проекте реализовано:
 
-## Expanding the ESLint configuration
+- Форма ввода: Пользователи могут вводить сумму, которую хотят конвертировать.
+- Выбор валюты: Доступен выбор исходной и целевой валюты из выпадающего списка.
+- Кнопка конвертации: При нажатии на кнопку происходит расчет и отображение результата конвертации.
+- Актуальные курсы валют: Приложение использует API для получения актуальных курсов валют, обеспечивая точность расчетов.
+- Интуитивно понятный интерфейс: Простой и удобный интерфейс, который позволяет пользователям быстро и легко выполнять конвертацию валют.
+- Адаптивный дизайн: Приложение корректно отображается на различных устройствах, включая мобильные телефоны и планшеты.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Используемый стек
 
-- Configure the top-level `parserOptions` property like this:
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" height="40" alt="eslint logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+</div>
 
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ['./tsconfig.node.json', './tsconfig.app.json'],
-			tsconfigRootDir: import.meta.dirname,
-		},
-	},
-})
+## Установка и запуск
+
+Для установки и запуска проекта необходимо выполнить команды
+
+```
+npm install
+npm run start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+или
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```
+yarn
+yarn start
+```
 
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: '18.3' } },
-	plugins: {
-		// Add the react plugin
-		react,
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs['jsx-runtime'].rules,
-	},
-})
+## Сборка
+
+```
+npm run build
+```
+
+или
+
+```
+yarn build
 ```
