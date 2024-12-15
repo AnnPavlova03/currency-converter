@@ -1,13 +1,16 @@
 @use 'variables' as *;
 
 body {
-	display: flex;
-	flex-direction: column;
 	box-sizing: border-box;
 	height: 100%;
 	color: $font-color;
 	font-family: $font-family;
 	background-color: $bg-main;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
 }
 
 h1,
@@ -17,7 +20,8 @@ h4,
 h5,
 h6,
 span,
-p {
+p,
+a {
 	margin: 0;
 }
 
@@ -27,7 +31,17 @@ a {
 }
 
 button {
+	color: inherit;
+	font-family: inherit;
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition:
+		color 0.3s ease,
+		background-color 0.3s ease;
+
+	&:hover {
+		color: $white;
+		background-color: $hover;
+	}
 }
