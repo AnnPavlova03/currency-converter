@@ -1,0 +1,21 @@
+@use '../../styles/variables' as *;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 200px;
+	padding-inline: 120px;
+}
+
+.button {
+	padding: 24px;
+	font-size: $main-text-size;
+	border-radius: 20px;
+}
+
+.button_registration {
+	margin-inline-start: 20px;
+	color: $white;
+	background-color: $accent-color;
+}
