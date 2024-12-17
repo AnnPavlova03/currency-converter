@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "vite",
+		"dev-exposed": "vite --host",
 		"build": "cross-env NODE_ENV=production vite build",
 		"preview": "vite preview",
 		"stylelint": "stylelint \"src/**/*.{css,scss}\"",
