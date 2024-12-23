@@ -1,7 +1,6 @@
 import React, { FC, memo, ReactNode } from 'react'
 import { Header } from '../header'
 import styles from './layout.module.scss'
-import { MainForm } from '../../features/main-form'
 
 type TLayout = {
 	children: ReactNode
