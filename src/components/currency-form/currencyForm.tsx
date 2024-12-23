@@ -16,6 +16,7 @@ interface CurrencyFormProps {
 	onCurrencyValueChange?: (value: string) => void // Обработчик изменения суммы
 	onCurrencySelect?: (value: string) => void // Обработчик для выбора валюты
 	disabled?: boolean // Флаг, чтобы блокировать форму для отображения результата
+	label: string
 }
 
 export const CurrencyForm: React.FC<CurrencyFormProps> = (props) => {
@@ -26,13 +27,14 @@ export const CurrencyForm: React.FC<CurrencyFormProps> = (props) => {
 		onCurrencyValueChange,
 		onCurrencySelect,
 		disabled,
+		label,
 	} = props
 
 	return (
 		<form className={styles.mainForm} onSubmit={onSubmit}>
 			<div className={styles.itemsContainer}>
 				<Input
-					label='Введите сумму'
+					label={label}
 					name='currency-value'
 					id='currency-value'
 					placeholder='Сумма'

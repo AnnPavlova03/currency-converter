@@ -108,6 +108,7 @@ export const MainForm: React.FC = () => {
 				onSubmit={() => {}}
 				onCurrencyValueChange={handleCurrencyValueChange}
 				onCurrencySelect={handleCurrencySelect}
+				label='У меня есть'
 			/>
 
 			<div className={styles.buttonContainer}>
@@ -128,6 +129,7 @@ export const MainForm: React.FC = () => {
 				onSubmit={() => {}}
 				disabled={true}
 				onCurrencySelect={handleReceiveCurrencySelect}
+				label='Получу'
 			/>
 		</div>
 	)
