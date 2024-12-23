@@ -1,33 +1,25 @@
 @use '../../styles/variables' as *;
 
-.inputContainer {
+.inputComponent {
 	position: relative;
-	min-width: 268px;
-	margin-bottom: 26px;
 }
 
 label {
 	display: block;
 	max-width: 284px;
-	padding: 0 0 6px 16px;
+	padding: 0 0 8px 16px;
 	color: black;
 	font-weight: $font-weight-semi-bold;
+	font-size: $text-size-small;
 	background-color: inherit;
 }
 
 input {
-	width: 268px;
+	max-width: 268px;
 	padding: 23px 0 23px 16px;
+	font-size: $amount-text-size;
 	background-color: $bg-input;
 	border: none;
 	border-radius: 16px;
 	outline: none;
-}
-
-span {
-	position: absolute;
-	top: 100%;
-	display: block;
-	padding-left: 6px;
-	color: red;
 }

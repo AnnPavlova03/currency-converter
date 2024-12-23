@@ -1,15 +1,40 @@
 import React from 'react'
 import styles from './input.module.scss'
-import { Field, ErrorMessage as Error } from 'formik'
 
-export const Input: React.FC = (props) => {
-	const { id, label, name, placeholder } = props
+interface InputProps {
+	label: string
+	name: string
+	id: string
+	placeholder?: string
+	type?: string
+	value: string
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
 
+export const Input: React.FC<InputProps> = ({
+	id,
+	label,
+	name,
+	placeholder,
+	type = 'text',
+	value,
+	onChange,
+}) => {
 	return (
 		<div className={styles.inputContainer}>
 			<label htmlFor={id}>{label}</label>
-			<Field name={name} id={id} placeholder={placeholder} />
-			<Error name={name}>{(error) => <span>{error}</span>}</Error>
+			<div className={styles.inputWrapper}>
+				<input
+					name={name}
+					id={id}
+					placeholder={placeholder}
+					type={type}
+					className={styles.inputField}
+					value={value}
+					onChange={onChange}
+					required={true}
+				/>
+			</div>
 		</div>
 	)
 }

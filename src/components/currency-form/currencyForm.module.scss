@@ -1,16 +1,17 @@
 @use '../../styles/variables' as *;
 
 .mainForm {
-	display: flex;
 	align-content: center;
+	min-width: 590px;
+	min-height: 280px;
 	background-color: #d9d9d9;
 	background-color: $white;
-	border-radius: 16px;
+	border-radius: 32px;
 }
 
 .itemsContainer {
 	display: flex;
-	align-items: center;
-	max-width: 456px;
-	padding: 100px 0 100px 52px;
+	justify-content: center;
+	align-items: end;
+	margin: auto;
 }
