@@ -10,9 +10,7 @@ export const Layout: FC<TLayout> = memo(({ children }) => {
 	return (
 		<>
 			<Header />
-			<main className={styles.main}>
-				<MainForm />
-			</main>
+			<main className={styles.main}>{children}</main>
 		</>
 	)
 })
