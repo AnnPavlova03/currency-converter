@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.mainForm {
+	align-content: center;
+	min-width: 590px;
+	min-height: 280px;
+	background-color: #d9d9d9;
+	background-color: $white;
+	border-radius: 32px;
+}
+
+.itemsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	margin: auto;
+}
