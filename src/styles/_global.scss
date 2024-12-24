@@ -8,11 +8,6 @@ body {
 	background-color: $bg-main;
 }
 
-#root {
-	display: flex;
-	flex-direction: column;
-}
-
 h1,
 h2,
 h3,
@@ -39,9 +34,22 @@ button {
 	transition:
 		color 0.3s ease,
 		background-color 0.3s ease;
+}
 
-	&:hover {
-		color: $white;
-		background-color: $hover;
+fieldset {
+	padding: 0;
+	border: none;
+}
+
+input {
+	box-sizing: border-box;
+	border: none;
+
+	&::placeholder {
+		color: $placeholder;
+	}
+
+	&:focus {
+		outline: none;
 	}
 }
