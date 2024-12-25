@@ -12,6 +12,11 @@
 	padding: 24px;
 	font-size: $main-text-size;
 	border-radius: 20px;
+
+	&:hover {
+		color: $white;
+		background-color: $hover;
+	}
 }
 
 .button_registration {
