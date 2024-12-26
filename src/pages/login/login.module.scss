@@ -1,18 +1,12 @@
 @use '../../styles/variables' as *;
 
-.login {
-	width: 100%;
-	margin-block-start: 105px;
-}
-
 .form {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	box-sizing: border-box;
 	width: 616px;
-	margin: 0 auto;
+	margin-block-start: 105px;
 	padding: 40px 32px;
 	background-color: $white;
 	border-radius: 32px;

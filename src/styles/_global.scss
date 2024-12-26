@@ -1,7 +1,10 @@
 @use 'variables' as *;
 
-body {
+* {
 	box-sizing: border-box;
+}
+
+body {
 	height: 100%;
 	color: $font-color;
 	font-family: $font-family;
@@ -21,6 +24,7 @@ a {
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -41,8 +45,8 @@ fieldset {
 	border: none;
 }
 
-input {
-	box-sizing: border-box;
+input,
+select {
 	border: none;
 
 	&::placeholder {

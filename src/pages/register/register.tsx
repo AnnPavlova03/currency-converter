@@ -1,47 +1,32 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { MyFormValues, initialValues, schemas } from './helper.ts'
+import { initialValues, schemas } from './helper.ts'
 import visibility from '../../assets/svg/visibility.svg'
 import visibilityOff from '../../assets/svg/visibility_off.svg'
 import styles from './register.module.scss'
 
 export const Register = () => {
 	const [type, setType] = useState('password')
-	const [visibilityIcon, setVisibilityIcon] = useState(visibility)
+	const [visibilityIcon, setVisibilityIcon] = useState(visibilityOff)
 
 	const handleFieldTypeToggle = () => {
 		if (type === 'password') {
-			setVisibilityIcon(visibilityOff)
+			setVisibilityIcon(visibility)
 			setType('text')
 		} else {
-			setVisibilityIcon(visibility)
+			setVisibilityIcon(visibilityOff)
 			setType('password')
 		}
 	}
 
-	const validate = (values: MyFormValues) => {
-		const errors: {
-			email?: string
-			password?: string
-			repeat_password?: string
-		} = {}
-
-		if (values.repeat_password !== values.password) {
-			errors.repeat_password = '* Пароли не совпадают'
-		}
-		return errors
-	}
-
 	return (
-		<div className={styles.register}>
+		<>
 			<Formik
 				initialValues={initialValues}
-				validationSchema={schemas.custom}
-				validate={validate}
+				validationSchema={schemas}
 				onSubmit={(values, actions) => {
 					console.log(values)
 					actions.resetForm()
-
 					setVisibilityIcon(visibility)
 					setType('password')
 				}}
@@ -50,7 +35,6 @@ export const Register = () => {
 					<Form className={`${styles.form}`}>
 						<h2 className={`${styles.h2}`}>Регистрация</h2>
 						<button className={`${styles.button_close}`} type='button'></button>
-
 						<fieldset className={`${styles.fieldset}`}>
 							<Field
 								className={`${styles.input} ${props.touched.email && props.errors.email && styles.input_error}`}
@@ -118,7 +102,6 @@ export const Register = () => {
 									/>
 								)}
 						</fieldset>
-
 						<button
 							className={`${styles.button_register} ${props.touched.email && props.touched.password && props.touched.repeat_password && !props.isValid && styles.button_register_disabled}`}
 							type='submit'
@@ -134,6 +117,6 @@ export const Register = () => {
 					</Form>
 				)}
 			</Formik>
-		</div>
+		</>
 	)
 }

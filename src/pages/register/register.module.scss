@@ -1,18 +1,12 @@
 @use '../../styles/variables' as *;
 
-.register {
-	width: 100%;
-	margin-block-start: 60px;
-}
-
 .form {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	box-sizing: border-box;
 	width: 616px;
-	margin: 0 auto;
+	margin-block-start: 60px;
 	padding: 40px 32px;
 	background-color: $white;
 	border-radius: 32px;
