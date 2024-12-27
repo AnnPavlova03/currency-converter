@@ -11,7 +11,13 @@
 .button {
 	padding: 24px;
 	font-size: $main-text-size;
+	background-color: $white;
 	border-radius: 20px;
+
+	&:hover {
+		color: $white;
+		background-color: $hover;
+	}
 }
 
 .button_registration {

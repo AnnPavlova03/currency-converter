@@ -1,16 +1,14 @@
 @use 'variables' as *;
 
-body {
+* {
 	box-sizing: border-box;
+}
+
+body {
 	height: 100%;
 	color: $font-color;
 	font-family: $font-family;
 	background-color: $bg-main;
-}
-
-#root {
-	display: flex;
-	flex-direction: column;
 }
 
 h1,
@@ -26,6 +24,7 @@ a {
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -39,9 +38,22 @@ button {
 	transition:
 		color 0.3s ease,
 		background-color 0.3s ease;
+}
 
-	&:hover {
-		color: $white;
-		background-color: $hover;
+fieldset {
+	padding: 0;
+	border: none;
+}
+
+input,
+select {
+	border: none;
+
+	&::placeholder {
+		color: $placeholder;
+	}
+
+	&:focus {
+		outline: none;
 	}
 }
