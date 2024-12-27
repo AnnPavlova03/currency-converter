@@ -17,6 +17,7 @@ const randomData = () => {
 }
 
 const generatedData = randomData()
+
 interface DataPoint {
 	x: number
 	y: number

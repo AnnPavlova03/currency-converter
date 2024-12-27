@@ -73,7 +73,6 @@ export const Login = () => {
 							/>
 						)}
 					</fieldset>
-
 					<button
 						className={`${styles.button_login} ${props.touched.email && props.touched.password && !props.isValid && styles.button_login_disabled}`}
 						type='submit'
